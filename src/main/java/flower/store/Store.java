@@ -32,8 +32,8 @@ public class Store {
             if (minBudget <= price && price <= maxBudget) {
                 for (FlowerPack pack : bucket.getFlowerPacks()) {
                     Flower flower = pack.getFlower();
-                    if (flowerType.equals(flower.getFlowerType()) && 
-                        flowerColor.toString().equals(flower.getColor())) {
+                    if (flowerType.equals(flower.getFlowerType())
+                        && flowerColor.toString().equals(flower.getColor())) {
                         result.add(bucket);
                         break;
                     }

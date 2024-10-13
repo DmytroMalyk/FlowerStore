@@ -9,14 +9,14 @@ import java.util.List;
 
 public class FlowerBucketTest {
 
-    private FlowerBucket flowerBucket;
-    private FlowerPack rosePack;
-    private FlowerPack tulipPack;
-
     private static final double ROSE_PRICE = 10.0;
     private static final double TULIP_PRICE = 15.0;
     private static final int ROSE_QUANTITY = 5;
     private static final int TULIP_QUANTITY = 3;
+
+    private FlowerBucket flowerBucket;
+    private FlowerPack rosePack;
+    private FlowerPack tulipPack;
 
     @BeforeEach
     public void init() {
@@ -58,8 +58,8 @@ public class FlowerBucketTest {
         flowerBucket.addFlowerPack(rosePack);
         flowerBucket.addFlowerPack(tulipPack);
         
-        double expectedPrice = (ROSE_PRICE * ROSE_QUANTITY) + 
-                               (TULIP_PRICE * TULIP_QUANTITY);
+        double expectedPrice = (ROSE_PRICE * ROSE_QUANTITY)
+                               + (TULIP_PRICE * TULIP_QUANTITY);
         Assertions.assertEquals(expectedPrice, flowerBucket.getPrice(),
             "Total price should be calculated correctly");
     }
